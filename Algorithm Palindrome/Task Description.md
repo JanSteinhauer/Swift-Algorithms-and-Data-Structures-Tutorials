@@ -1,45 +1,56 @@
-Great question! The issue is that **`reversed()` does not return a `String`**, but rather a `ReversedCollection<String>`. Let's break it down:
+### **Task Description: Palindrome Number Checker**
 
-### **Why Doesn't `target.reversed()` Work Directly?**
-- `target` is a `String`.
-- Calling `target.reversed()` on a `String` **does not return a `String`**.
-- Instead, it returns a `ReversedCollection<String>`, which is a special type that represents a reversed view of the original collection.
-- A `ReversedCollection<String>` **cannot** be directly compared to a `String`.
+#### **Objective**  
+Implement a function that determines whether a given integer is a palindrome. A palindrome is a number that reads the same forward and backward.
 
-### **Example**
+#### **Function Signature**  
 ```swift
-let target = "123"
-print(type(of: target.reversed())) 
-// Output: ReversedCollection<String>
+func isPalindrome(_ x: Int) -> Bool
 ```
 
-### **Why Does `String(target.reversed())` Work?**
-- Wrapping `target.reversed()` in `String()` explicitly **converts** the reversed collection back into a `String`.
-- This allows you to compare two `String` values properly.
+#### **Input**  
+- A single integer `x` where `-2³¹ ≤ x ≤ 2³¹ - 1`.
 
-### **Correct Code**
+#### **Output**  
+- Return `true` if `x` is a palindrome.  
+- Return `false` otherwise.
+
+#### **Constraints**  
+- You **cannot** convert the integer to a string or use any string-based methods to determine if it's a palindrome.
+- You must implement the solution using **mathematical operations only**.
+
+#### **Examples**  
+
+##### **Example 1**  
 ```swift
-if target == String(target.reversed()) {
-    print("It's a palindrome!")
-}
+print(isPalindrome(121))   // Output: true
 ```
+**Explanation:**  
+- When reading `121` from left to right, it remains `121`.  
+- The first and last digits are the same (`1` and `1`), and the middle digit is the same when reversed.  
+- Since the number is identical when reversed, it is a **palindrome**.
 
-### **What Happens If You Omit `String()`?**
-If you try:
+##### **Example 2**  
 ```swift
-if target == target.reversed() { 
-    print("It's a palindrome!")
-}
+print(isPalindrome(-121))  // Output: false
 ```
-You’ll get a **type mismatch error**:
-```
-Cannot convert value of type 'ReversedCollection<String>' to expected argument type 'String'
-```
-This happens because Swift doesn’t automatically convert a `ReversedCollection<String>` to a `String` in the comparison.
+**Explanation:**  
+- The number `-121` appears as `121-` when reversed.  
+- The negative sign `-` makes it impossible to be symmetric.  
+- Since the number does not read the same forward and backward, it is **not a palindrome**.
 
-### **Key Takeaways**
-✅ **`String.reversed()` returns a `ReversedCollection<String>`**, not a `String`.  
-✅ **You must explicitly convert it back to a `String` using `String(target.reversed())`**.  
-✅ **Swift doesn’t implicitly convert collections to strings**, so you need to manually handle the conversion.  
+##### **Example 3**  
+```swift
+print(isPalindrome(10))    // Output: false
+```
+**Explanation:**  
+- The number `10` becomes `01` when reversed, which is not the same.  
+- Since the digits are not identical in reverse order, `10` is **not a palindrome**.
 
-Let me know if you need further clarification! 😊
+##### **Example 4**  
+```swift
+print(isPalindrome(0))    // Output: true
+```
+**Explanation:**  
+- The number `0` reads the same forward and backward.  
+- Since it remains unchanged, it is a **palindrome**.
