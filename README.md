@@ -35,7 +35,7 @@ You can also open an issue if you have suggestions, feature requests, or bug rep
 For questions, feedback, or collaboration opportunities, feel free to reach out:  
 
 📩 **Jan Steinhauer**  
-📨 jan.steinhauer@utexas.edu  
+📨 jan.armin.steinhauer@gmail.com  
 
 ---
 
