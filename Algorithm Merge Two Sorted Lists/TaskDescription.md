@@ -39,7 +39,7 @@ Will produce:
 
 #### **Illustration**
 
-![Merge Two Lists](attachment:mergeTwoLists.jpg)
+![Merge Two Lists](mergeTwoLists.jpg)
 
 **Explanation:**  
 - The function compares values from each list node by node and adds the smaller one to the new list.
