@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2B4CDA2D993A8C00C09BB0 /* TaskDescription.md in Resources */ = {isa = PBXBuildFile; fileRef = EC2B4CD92D993A8C00C09BB0 /* TaskDescription.md */; };
+		EC2B4CDC2D993AA600C09BB0 /* mergeTwoLists.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC2B4CDB2D993AA600C09BB0 /* mergeTwoLists.jpg */; };
 		ECF1F8382D989E9E0040D58D /* Algorithm Merge Two Sorted Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF1F8372D989E9E0040D58D /* Algorithm Merge Two Sorted Lists.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC2B4CD92D993A8C00C09BB0 /* TaskDescription.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TaskDescription.md; sourceTree = "<group>"; };
+		EC2B4CDB2D993AA600C09BB0 /* mergeTwoLists.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mergeTwoLists.jpg; sourceTree = "<group>"; };
 		ECF1F82F2D989E940040D58D /* Algorithm Merge Two Sorted Lists Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algorithm Merge Two Sorted Lists Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF1F8372D989E9E0040D58D /* Algorithm Merge Two Sorted Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Algorithm Merge Two Sorted Lists.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +42,8 @@
 			isa = PBXGroup;
 			children = (
 				ECF1F8372D989E9E0040D58D /* Algorithm Merge Two Sorted Lists.swift */,
+				EC2B4CDB2D993AA600C09BB0 /* mergeTwoLists.jpg */,
+				EC2B4CD92D993A8C00C09BB0 /* TaskDescription.md */,
 				ECF1F8312D989E940040D58D /* Algorithm Merge Two Sorted Lists Test */,
 				ECF1F8302D989E940040D58D /* Products */,
 			);
@@ -115,6 +121,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2B4CDA2D993A8C00C09BB0 /* TaskDescription.md in Resources */,
+				EC2B4CDC2D993AA600C09BB0 /* mergeTwoLists.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
